@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>øvelse1</title>
+      <script>
+
+             function performOperetion(operator) {
+               var x = parseInt(document.getElementById('txt1').value);
+               var y = parseInt(document.getElementById('txt2').value);
+
+                var result;
+                switch (operator) {
+                  case ' + ':
+                  result = x + y;
+                    break;
+
+                   case ' - ':
+                    result = x - y;
+                      break;
+
+                    case ' * ':
+                      result = x * y;
+                        break;
+
+                     case ' / ':
+                     if (y == 0)
+                     result = "kan ikke dividere med 0";
+                     else
+                      result = x / y;
+                        break;
+
+                  default:
+                  result = 0;
+
+                }
+
+               document.getElementById('result').value = result;
+
+              }
+
+        </script>
+
+ </head>
+
+    <body>
+
+        <input  type="text" id="txt1" />
+
+        <button onclick="performOperetion(' + ')"> + </button>
+        <button onclick="performOperetion(' - ')"> - </button>
+        <button onclick="performOperetion(' * ')"> * </button>
+        <button onclick="performOperetion(' / ')"> / </button>
+
+        <input  type="text" id="txt2" />
+        <p> Resultatet er: </p>
+        <input  type="text" id="result" />
+
+
+
+
+
+
+
+    </body>
+</html>
